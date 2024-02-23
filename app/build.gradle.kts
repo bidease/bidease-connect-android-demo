@@ -8,7 +8,7 @@ android {
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.bidease.connect.android.demo"
+        applicationId = "wtf.be.ademo" // demo bundle id
         minSdk = 24
         targetSdk = 34
         versionCode = 1
@@ -50,6 +50,7 @@ android {
 }
 
 dependencies {
+    implementation("com.bidease:connect-android-sdk:3.0.1")
 
     implementation("androidx.core:core-ktx:1.12.0")
     implementation("androidx.appcompat:appcompat:1.6.1")
