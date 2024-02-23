@@ -52,6 +52,15 @@ fun BideaseConnectAndroidDemoApp() {
             composable(route = AdNetworks.route) {
                 AdNetworks.screen(navController)
             }
+            composable(
+                route = AdNetwork.route,
+                arguments = AdNetwork.arguments
+            ) { backStackEntry ->
+                AdNetwork.screen(
+                    navController,
+                    backStackEntry.arguments?.getInt(AdNetwork.ARG_AD_NETWORK_ID) ?: 0
+                )
+            }
         }
     }
 }

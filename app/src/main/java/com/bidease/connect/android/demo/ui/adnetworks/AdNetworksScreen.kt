@@ -14,11 +14,21 @@ import androidx.compose.ui.draw.paint
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
+import androidx.navigation.NavHostController
+import com.bidease.ads.adnetwork.applovin.AppLovinFactory
+import com.bidease.ads.adnetwork.bidease.BideaseFactory
+import com.bidease.ads.adnetwork.chartboost.ChartboostFactory
+import com.bidease.ads.adnetwork.fyber.FyberFactory
+import com.bidease.ads.adnetwork.mintegral.MintegralFactory
+import com.bidease.ads.adnetwork.pangle.PangleFactory
+import com.bidease.ads.adnetwork.unity.UnityFactory
+import com.bidease.ads.adnetwork.vungle.VungleFactory
+import com.bidease.connect.android.demo.AdNetworks
 import com.bidease.connect.android.demo.R
 import com.bidease.connect.android.demo.ui.button.CommonButton
 
 @Composable
-fun AdNetworksScreen() {
+fun AdNetworksScreen(navController: NavHostController) {
     Box(
         modifier = Modifier
             .fillMaxSize()
@@ -37,47 +47,47 @@ fun AdNetworksScreen() {
             Spacer(modifier = Modifier.height(16.dp))
             CommonButton(
                 title = "AppLovin",
-                onClick = {}
+                onClick = { navController.navigate("adNetwork/${AppLovinFactory.ID}") }
             )
             Spacer(modifier = Modifier.height(16.dp))
             CommonButton(
                 title = "Bidease",
-                onClick = {}
+                onClick = { navController.navigate("adNetwork/${BideaseFactory.ID}") }
             )
             Spacer(modifier = Modifier.height(16.dp))
             CommonButton(
                 title = "Chartboost",
-                onClick = {}
+                onClick = { navController.navigate("adNetwork/${ChartboostFactory.ID}") }
             )
             Spacer(modifier = Modifier.height(16.dp))
             CommonButton(
                 title = "Digital Turbine",
-                onClick = {}
+                onClick = { navController.navigate("adNetwork/${FyberFactory.ID}") }
             )
             Spacer(modifier = Modifier.height(16.dp))
             CommonButton(
                 title = "Mintegral",
-                onClick = {}
+                onClick = { navController.navigate("adNetwork/${MintegralFactory.ID}") }
             )
             Spacer(modifier = Modifier.height(16.dp))
             CommonButton(
                 title = "Pangle",
-                onClick = {}
+                onClick = { navController.navigate("adNetwork/${PangleFactory.ID}") }
             )
-            Spacer(modifier = Modifier.height(16.dp))
-            CommonButton(
-                title = "Start.io",
-                onClick = {}
-            )
+//            Spacer(modifier = Modifier.height(16.dp))
+//            CommonButton(
+//                title = "Start.io",
+//                onClick = {}
+//            )
             Spacer(modifier = Modifier.height(16.dp))
             CommonButton(
                 title = "Unity",
-                onClick = {}
+                onClick = { navController.navigate("adNetwork/${UnityFactory.ID}") }
             )
             Spacer(modifier = Modifier.height(16.dp))
             CommonButton(
                 title = "Vungle",
-                onClick = {}
+                onClick = { navController.navigate("adNetwork/${VungleFactory.ID}") }
             )
         }
     }
